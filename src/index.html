@@ -2,26 +2,62 @@
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Sonia Martí" />
+    <meta name="description" content='Esta página es un proyecto para la asignatura "Herramientas HTML y CSS II" de la UOC.'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="Shortcut Icon" href="./assets/images/logo-grupo.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>Mish | Rock band</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
+    <div class="grid auto-rows-auto grid-cols-customized w-full pt-0 pb-12">
+      <header class="row-start-1 col-start-2 col-end-6 bg-transparent z-0">
+        <nav>
+          <div class="flex flex-wrap justify-between items-center m-3">
+            <div>
+              <a class="m-0" href="index.html">
+                <img class="inline-block text-center" src="./assets/images/Logo-grupo-blanco.webp" alt="Logotipo de la web que dirige a la página principal" width="50" height="50"> 
+              </a>
+              <a class="font-alte text-white text-xl m-0 p-0" href="index.html">MISH</a>
+            </div> 
+            <button class="visible md:invisible text-white text-2xl opacity-70 outline outline-1 outline-offset-4 outline-white/20 focus:outline-white focus:outline-2 rounded-md w-12">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="hidden md:inline-block justify-content-end">
+              <div class="font-alte text-white">
+                <a class="nav-enlace" href="componentes.html">Componentes</a>
+                <a class="nav-enlace" href="">Biografía</a>
+                <a class="nav-enlace" href="">Galería</a>
+              </div>
+            </div>
+          </div>
+        </nav>   
+      </header>
+      <picture class="row-start-1 row-end-4 col-start-1 col-end-7">
+        <source media="(max-width: 650px)" srcset="./assets/images/img-portada-480.webp" width="480" height="480">
+        <source media="(min-width: 651px)" srcset="./assets/images/img-portada-1920-2.webp" width="1920" height="1024">
+        <img src="./assets/images/img-portada-1920-2.webp" alt="Foto del grupo Mish" width="1920" height="1024">
       </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+      <h1 class="font-alte row-start-3 row-end-4 col-start-1 col-end-7 md:row-start-2 md:row-end-3 md:col-start-3 md:col-end-5 self-center justify-self-center text-9xl text-yellow mb-2">MISH</h1>
+      <p class="row-start-4 row-end-5 col-start-1 col-end-4 md:row-start-3 md:row-end-5 m-0 bg-white"></p>
+      <div class="row-start-4 row-end-5 col-start-2 col-end-7 md:row-start-3 md:row-end-4 md:col-start-2 md:col-end-4 pt-7 pr-12 bg-white">
+        <h2 class="font-alte text-2xl md:text-3xl mb-2">Rock Band</h2>
+        <hr class="opacity-25 my-4">
+        <p class="leading-6 my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae nisi rhoncus elit hendrerit mollis et iaculis massa. Donec vehicula euismod dapibus. Cras id libero ac tortor ultrices malesuada nec vel urna.</p>
+        <p class="leading-6 my-4">Quisque facilisis enim dolor, vitae rhoncus massa aliquam eget. Fusce porttitor justo nisi, vestibulum euismod urna malesuada sed. Duis mollis magna hendrerit.</p>
+      </div>
+      <include src="components/button.html" locals='{
+        "text": "Leer más"
+      }'></include>
     </div>
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
   </body>
 </html>
+

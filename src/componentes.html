@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Sonia Martí" />
+    <meta name="description" content='Esta página es un proyecto para la asignatura "Herramientas HTML y CSS II" de la UOC.'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="Shortcut Icon" href="./assets/images/logo-grupo.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>Mish | Rock band</title>
+  </head>
+  <body>
+    <header class="bg-black py-2">
+      <nav class="w-4/5 m-auto">
+        <div class="flex flex-wrap justify-between items-center">
+          <div>
+            <a class="m-0" href="index.html">
+              <img class="inline-block text-center" src="./assets/images/Logo-grupo-blanco.webp" alt="Logotipo de la web que dirige a la página principal" width="50" height="50"> 
+            </a>
+            <a class="font-alte text-white text-xl m-0 p-0" href="index.html">MISH</a>
+          </div> 
+          <button class="visible md:invisible text-white text-2xl opacity-70 outline outline-1 outline-offset-4 outline-white/20 focus:outline-white focus:outline-2 rounded-md w-12">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="hidden md:inline-block justify-content-end">
+            <div class="font-alte text-white">
+              <a class="text-center mx-4" aria-current="page" href="componentes.html">Componentes</a>
+              <a class="nav-enlace" href="">Biografía</a>
+              <a class="nav-enlace" href="">Galería</a>
+            </div>
+          </div>
+        </div>
+      </nav>   
+    </header>
+    <main class="w-4/5 m-auto py-12">
+      <h2 class="text-center font-alte text-2xl md:text-3xl">COMPONENTES</h2>
+      <div class="flex flex-wrap justify-between">
+        <div class="card-contenedor">
+          <img src="./assets/images/cantante.webp" class="rounded-t-md" alt="Foto de la cantante de la banda">
+          <include src="components/card-info.html" locals='{
+            "nombre": "Mar Escudero",
+            "funcion": "Cantante",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque velit enim, vel facilisis dui feugiat vitae. Etiam viverra tortor nisi, ut tempor arcu accumsan eu."
+          }'></include>
+        </div>
+        <div class="card-contenedor">
+          <img src="./assets/images/guitarra.webp" class="rounded-t-md" alt="Foto del guitarrista de la banda">
+          <include src="components/card-info.html" locals='{
+            "nombre": "Javier Murillo",
+            "funcion": "Guitarrista",
+            "descripcion": "Phasellus sit amet turpis tincidunt, molestie libero consectetur, molestie magna. Aenean felis tellus, pellentesque nec est ut, tempor accumsan tellus."
+          }'></include>
+        </div>
+        <div class="card-contenedor">
+          <img src="./assets/images/piano.webp" class="rounded-t-md" alt="Foto del teclista de la banda">
+          <include src="components/card-info.html" locals='{
+            "nombre": "Saul Manrique",
+            "funcion": "Teclista",
+            "descripcion": "Nunc sit amet lacus vitae nisi sollicitudin tincidunt. Donec accumsan urna sem, quis convallis nulla semper nec. Vestibulum ac massa neque."
+          }'></include>
+        </div>
+        <div class="card-contenedor">
+          <img src="./assets/images/bajo.webp" class="rounded-t-md" alt="Foto del bajo de la banda">
+          <include src="components/card-info.html" locals='{
+            "nombre": "Sergi Cabeza",
+            "funcion": "Bajo",
+            "descripcion": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce dictum orci euismod mi iaculis sollicitudin."
+          }'></include>
+        </div>
+        <div class="card-contenedor">
+          <img src="./assets/images/saxo.webp" class="rounded-t-md" alt="Foto del saxo de la banda">
+          <include src="components/card-info.html" locals='{
+            "nombre": "Gonzalo Martí",
+            "funcion": "Saxo",
+            "descripcion": "Curabitur ex augue, luctus quis nulla in, luctus porta neque. Aenean placerat vel quam sed dapibus. Donec porttitor iaculis viverra. Phasellus id est id eros porttitor viverra quis eget nibh."
+          }'></include>
+        </div>
+        <div class="card-contenedor">
+          <img src="./assets/images/bateria.webp" class="rounded-t-md" alt="Foto del batería de la banda">
+          <include src="components/card-info.html" locals='{
+            "nombre": "Alejandro Ferrero",
+            "funcion": "Batería",
+            "descripcion": "Ut vestibulum risus et mauris pellentesque, ac aliquam nulla vehicula. Nulla efficitur justo eget lobortis semper. Nullam fermentum dolor at mauris egestas scelerisque."
+          }'></include>
+        </div>
+      </div>
+    </main>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </body>
+</html>
+

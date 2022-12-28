@@ -2,6 +2,20 @@
  * Use this file to import partials.
  * Do not include SCSS code in this file.
  */
+@tailwind base;
+@tailwind components;
+
+@layer components {
+  .nav-enlace {
+    @apply text-center opacity-80 hover:opacity-50 transition-opacity duration-500 mx-4;
+  }
+}
+
+@layer components {
+  .card-contenedor {
+    @apply w-full sm:w-[49%] md:w-[32%] outline outline-1 outline-gray/20 rounded-md my-8;
+  }
+}
 
 /**
  * Import variables
@@ -18,12 +32,17 @@
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
 @import "layouts/home";
+
+
+@tailwind utilities;
 
 /**
  * Do NOT include anything else in this file!
